@@ -359,8 +359,9 @@ class StateMachine(smach.container.Container):
             # Spew some info
             # smach.loginfo("State machine starting in initial state '%s' with userdata: \n\t%s" %
                     # (self._current_label, list(self.userdata.keys())))
-            rospy.loginfo('\033[1;38;5;224m' + "State machine starting in initial state '%s' with userdata: \n\t%s" %
-                    (self._current_label, list(self.userdata.keys())) + '\033[0m')                   
+            rospy.loginfo('\033[1;38;5;189m' + "State machine starting in initial state '%s' " %
+                    (self._current_label) + '\033[0m')     
+            rospy.loginfo('\033[1;38;5;255m' + "Userdata: \n%s" %(list(self.userdata.keys())) + '\033[0m')              
 
 
             # Call start callbacks
